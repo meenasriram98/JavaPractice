@@ -11,6 +11,8 @@ public class Convert {
 		
 		Map<Integer,Map<Integer,Integer>> map=new TreeMap<>();
 		
+		
+		//iterates through the list and creates a map with id as key
         for (Level level : list) {
         	map.put(level.id, new HashMap(){{put(level.id,level.parentId);}});
 			
