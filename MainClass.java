@@ -11,31 +11,21 @@ public class MainClass {
 
 		Scanner sc=new Scanner(System.in);
 		
-		while(true)
-		{
-			System.out.println("1.enter values into list  2. covert into map ");
-			int input=sc.nextInt();
-			switch(input)
-			{
-			case 1:
-			{
-				System.out.println("enter id and parentid");
-				int id=sc.nextInt();
-				int parentid=sc.nextInt();
-				list.add(new Level(id,parentid));
-				break;
-			}
-			case 2:
-			{
-				Convert convert=new Convert();
-				convert.convertListToMap(list);
-				break;
-			}
-			}
-		}
-		
+		list.add(new Level(1,-1));
+		list.add(new Level(11,1));
+		list.add(new Level(21,2));
+		list.add(new Level(22,2));
+		list.add(new Level(2,-1));
+		list.add(new Level(331,31));
+		list.add(new Level(31,3));
+		list.add(new Level(3,-1));
+		list.add(new Level(4,-1));
+		list.add(new Level(48,4));
+		list.add(new Level(488,48));
+		list.add(new Level(98,488));
 	
-		
+		Convert convert=new Convert();
+		convert.convertListToMap(list);
 	}
 	
 
