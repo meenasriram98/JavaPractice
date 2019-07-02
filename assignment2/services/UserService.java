@@ -20,18 +20,28 @@ public class UserService {
 		System.out.println("enter id");
 		int id=sc.nextInt();
 		
-		if(userPresent(name))
+		if(saveUser(name,id))
+		{
+			System.out.println("user created");
+		}
+		else
 		{
 			System.out.println("user already exists");
+		}
+	}
+	
+	public boolean saveUser(String name,int id)
+	{
+		if(userPresent(name))
+		{
+			return false;
 		}
 		else
 		{
 			User user=new User(name,id);
 			usersrepository.addUser(user);
-			System.out.println("user added");
+			return true;
 		}
-		
-		
 	}
 	
 	public boolean userPresent(String name)

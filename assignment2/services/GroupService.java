@@ -25,11 +25,12 @@ public class GroupService {
 		return group;
 	}
 	
-	public void addGroup()
+	public boolean addGroup()
 	{
 		Group group=createGroup();
 		grouprepository.addGroup(group);
-		
+		System.out.println("group created");
+		return true;
 	}
 	
 	public void removeGroup()
@@ -37,10 +38,17 @@ public class GroupService {
 		System.out.println("Enter group name");
 		String name=sc.nextLine();
 		
+		if(!groupPresent(name))
+		{
+			System.out.println("group not present");
+		}
+		else
+		{
 		removeGroupFromGroup(name);
 		userService.removeGroupFromUser(name);
 		grouprepository.removeGroup(name);
 		System.out.println("group removed");
+		}
 		
 	}
 	

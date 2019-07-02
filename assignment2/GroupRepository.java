@@ -16,6 +16,11 @@ public class GroupRepository {
 		
 	}
 	
+	public int getSize()
+	{
+		return groupData.size();
+	}
+	
 	public static GroupRepository getInstance()
 	{
 		return INSTANCE;

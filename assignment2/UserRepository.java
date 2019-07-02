@@ -22,6 +22,11 @@ public class UserRepository {
 		return INSTANCE;
 	}
 	
+	public int getSize()
+	{
+		return userData.size();
+	}
+	
 	public void addUser(User user)
 	{
 		userData.put(user.getName(), user);
