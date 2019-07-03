@@ -3,9 +3,9 @@ package assignment2.services;
 import java.util.List;
 import java.util.Scanner;
 
-import assignment2.Group;
-import assignment2.GroupRepository;
-import assignment2.User;
+import assignment2.classes.Group;
+import assignment2.classes.User;
+import assignment2.repositories.GroupRepository;
 
 public class GroupService {
 	Scanner sc=new Scanner(System.in);

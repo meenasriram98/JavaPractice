@@ -1,14 +1,14 @@
-package assignment2.services;
+package assignment2.testCases;
 
 import static org.junit.Assert.*;
 
 //import org.junit.Test;
 import org.junit.*;
 
-import assignment2.Group;
-import assignment2.GroupRepository;
-import assignment2.User;
-import assignment2.UserRepository;
+import assignment2.classes.Group;
+import assignment2.classes.User;
+import assignment2.repositories.GroupRepository;
+import assignment2.repositories.UserRepository;
 
 public class GroupServiceTest {
 	//GroupService groupService=new GroupService();

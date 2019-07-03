@@ -4,13 +4,13 @@ package assignment2.services;
 import java.util.List;
 import java.util.Scanner;
 
-import assignment2.User;
-import assignment2.UserRepository;
+import assignment2.classes.User;
+import assignment2.repositories.UserRepository;
 
 public class UserService {
 	Scanner sc=new Scanner(System.in);
 	UserRepository usersrepository=UserRepository.getInstance();
-	GroupService groupservice=new GroupService();
+	
 	
 	public void createUser()
 	{
@@ -56,6 +56,7 @@ public class UserService {
 		
 		if(userPresent(name))
 		{
+			GroupService groupservice=new GroupService();
 			groupservice.removeUserFromAllGroups(name);
 			usersrepository.removeUser(name);
 			

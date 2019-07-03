@@ -1,9 +1,11 @@
-package assignment2;
+package assignment2.repositories;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import assignment2.classes.Group;
 
 public class GroupRepository {
 	
